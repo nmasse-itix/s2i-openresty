@@ -44,7 +44,6 @@ RUN \
   yum install -y luarocks && \
   luarocks install --server=http://luarocks.org/dev lua-rover && \
   rover -v && \
-  yum -y remove luarocks && \
   chmod g+w "${HOME}/.cache" && \
   rm -rf /var/cache/yum && yum clean all -y && \
   rm -rf "${HOME}/.cache/luarocks" ./*
