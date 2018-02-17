@@ -42,8 +42,6 @@ ENV PATH="./lua_modules/bin:/usr/local/openresty/luajit/bin/:${PATH}" \
 
 RUN \
   yum install -y luarocks && \
-  luarocks install --server=http://luarocks.org/dev lua-rover && \
-  rover -v && \
   chmod g+w "${HOME}/.cache" && \
   rm -rf /var/cache/yum && yum clean all -y && \
   rm -rf "${HOME}/.cache/luarocks" ./*
